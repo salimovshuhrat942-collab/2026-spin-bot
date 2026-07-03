@@ -12,7 +12,10 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from config import BOT_TOKEN
 from database import init_db
 
-from handlers import start, spin, buy, withdraw
+from handlers.start import router as start_router
+from handlers.spin import router as spin_router
+from handlers.buy import router as buy_router
+from handlers.withdraw import router as withdraw_router
 
 
 async def main():
