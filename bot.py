@@ -1,5 +1,15 @@
+import os
 import asyncio
 import logging
+
+print("===== DEBUG =====")
+print("Current directory:", os.getcwd())
+print("Root files:", os.listdir("."))
+
+if os.path.exists("handlers"):
+    print("Handlers folder:", os.listdir("handlers"))
+else:
+    print("Handlers folder topilmadi!")
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
