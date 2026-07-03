@@ -1,6 +1,3 @@
-# bot.py
-# MixaUC bot — asosiy ishga tushirish fayli
-
 import asyncio
 import logging
 
@@ -23,7 +20,11 @@ async def main():
 
     await init_db()
 
-    bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(
+        token=BOT_TOKEN,
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML)
+    )
+
     dp = Dispatcher(storage=MemoryStorage())
 
     dp.include_router(start_router)
